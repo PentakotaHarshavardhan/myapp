@@ -12,7 +12,9 @@ app.get("/quote/",(req,res)=>{
     res.send(quote[i]);
 });
 
-
+app.get("/",(req,res)=>{
+    res.send("Welcome!")
+});
 
 app.listen("3005",()=>{
     console.log("listening")
