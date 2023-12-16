@@ -7,7 +7,10 @@ const quote=[
     ["So this person went to the doctor and told the doctor he had an addiction to twitter and the doctor said well I am not following."]
 ];
 
-app.get("/quote/hi",(req,res)=>{
+app.use(cors());
+
+
+app.get("/quote",(req,res)=>{
     const i=Math.floor(Math.random()*3);
     res.send(quote[i]);
 });
